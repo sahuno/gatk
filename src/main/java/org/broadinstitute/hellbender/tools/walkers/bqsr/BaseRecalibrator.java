@@ -7,7 +7,8 @@ import org.broadinstitute.barclay.argparser.Argument;
 import org.broadinstitute.barclay.argparser.ArgumentCollection;
 import org.broadinstitute.barclay.argparser.CommandLineProgramProperties;
 import org.broadinstitute.barclay.argparser.RuntimeProperties;
-import org.broadinstitute.barclay.argparser.WorkflowResource;
+import org.broadinstitute.barclay.argparser.WorkflowInput;
+import org.broadinstitute.barclay.argparser.WorkflowOutput;
 import org.broadinstitute.barclay.help.DocumentedFeature;
 import org.broadinstitute.hellbender.cmdline.StandardArgumentDefinitions;
 import org.broadinstitute.hellbender.engine.*;
@@ -107,7 +108,7 @@ public final class BaseRecalibrator extends ReadWalker {
      * reflected those sites skipped by the -XL argument.
      */
     @Argument(fullName = KNOWN_SITES_ARG_FULL_NAME, doc = "One or more databases of known polymorphic sites used to exclude regions around known polymorphisms from analysis.", optional = false)
-    @WorkflowResource(output=false, input=true)
+    @WorkflowInput
     private List<FeatureInput<Feature>> knownSites;
 
     /**
@@ -117,7 +118,7 @@ public final class BaseRecalibrator extends ReadWalker {
      * and the raw empirical quality score calculated by phred-scaling the mismatch rate.   Use '/dev/stdout' to print to standard out.
      */
     @Argument(shortName = StandardArgumentDefinitions.OUTPUT_SHORT_NAME, fullName = StandardArgumentDefinitions.OUTPUT_LONG_NAME, doc = "The output recalibration table file to create", optional = false)
-    @WorkflowResource(output=true, input=false)
+    @WorkflowOutput
     private File recalTableFile = null;
 
     private BaseRecalibrationEngine recalibrationEngine;

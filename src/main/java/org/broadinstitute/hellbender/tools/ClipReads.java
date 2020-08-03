@@ -12,7 +12,7 @@ import org.apache.logging.log4j.Logger;
 import org.broadinstitute.barclay.argparser.Argument;
 import org.broadinstitute.barclay.argparser.CommandLineProgramProperties;
 import org.broadinstitute.barclay.argparser.RuntimeProperties;
-import org.broadinstitute.barclay.argparser.WorkflowResource;
+import org.broadinstitute.barclay.argparser.WorkflowOutput;
 import org.broadinstitute.barclay.help.DocumentedFeature;
 import org.broadinstitute.hellbender.cmdline.StandardArgumentDefinitions;
 import org.broadinstitute.hellbender.engine.GATKPath;
@@ -163,14 +163,14 @@ public final class ClipReads extends ReadWalker {
      * The output SAM/BAM/CRAM file will be written here
      */
     @Argument(doc = "BAM output file", shortName = StandardArgumentDefinitions.OUTPUT_SHORT_NAME, fullName = StandardArgumentDefinitions.OUTPUT_LONG_NAME)
-    @WorkflowResource(input=false, output=true, companionResources={StandardArgumentDefinitions.OUTPUT_LONG_NAME + "Index"})
+    @WorkflowOutput(requiredCompanions={StandardArgumentDefinitions.OUTPUT_LONG_NAME + "Index"})
     GATKPath OUTPUT;
 
     /**
      * If provided, ClipReads will write summary statistics about the clipping operations applied to the reads in this file.
      */
     @Argument(fullName = OUTPUT_STATISTICS_LONG_NAME, shortName = OUTPUT_STATISTICS_SHORT_NAME, doc = "File to output statistics", optional = true)
-    @WorkflowResource(input=false, output=true)
+    @WorkflowOutput
     GATKPath STATSOUTPUT = null;
 
     /**

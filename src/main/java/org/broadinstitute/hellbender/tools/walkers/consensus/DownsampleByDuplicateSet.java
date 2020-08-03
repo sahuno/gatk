@@ -4,7 +4,7 @@ import org.broadinstitute.barclay.argparser.Argument;
 import org.broadinstitute.barclay.argparser.BetaFeature;
 import org.broadinstitute.barclay.argparser.CommandLineProgramProperties;
 import org.broadinstitute.barclay.argparser.RuntimeProperties;
-import org.broadinstitute.barclay.argparser.WorkflowResource;
+import org.broadinstitute.barclay.argparser.WorkflowOutput;
 import org.broadinstitute.hellbender.cmdline.StandardArgumentDefinitions;
 import org.broadinstitute.hellbender.engine.DuplicateSetWalker;
 import org.broadinstitute.hellbender.engine.FeatureContext;
@@ -61,7 +61,7 @@ import java.util.Random;
 @RuntimeProperties
 public class DownsampleByDuplicateSet extends DuplicateSetWalker {
     @Argument(fullName = StandardArgumentDefinitions.OUTPUT_LONG_NAME, shortName = StandardArgumentDefinitions.OUTPUT_SHORT_NAME, doc = "Output file")
-    @WorkflowResource(output=true, input=false, companionResources = {StandardArgumentDefinitions.OUTPUT_LONG_NAME + "Index"})
+    @WorkflowOutput(requiredCompanions = {StandardArgumentDefinitions.OUTPUT_LONG_NAME + "Index"})
     public GATKPath outputBam;
 
     public static final String FRACTION_TO_KEEP_NAME = "fraction-to-keep";
