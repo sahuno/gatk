@@ -267,6 +267,8 @@ dependencies {
         transitive = false
     }
 
+    compile "com.google.protobuf:protobuf-java:3.12.2"
+
     compile "gov.nist.math.jama:gov.nist.math.jama:1.1.1"
 
     // this comes built-in when running on Google Dataproc, but the library
