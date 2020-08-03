@@ -176,8 +176,6 @@ if (versionOverridden) {
 
 configurations.all {
     resolutionStrategy {
-        // the snapshot folder contains a dev version of guava, we don't want to use that.
-        force 'com.google.guava:guava:18.0'
         // force the htsjdk version so we don't get a different one transitively
         force 'com.github.samtools:htsjdk:' + htsjdkVersion
         // force testng dependency so we don't pick up a different version via GenomicsDB
@@ -263,7 +261,7 @@ dependencies {
         exclude module: 'protobuf-java'
     }
     compile 'com.opencsv:opencsv:3.4'
-    compile 'com.google.guava:guava:18.0'
+    compile 'com.google.guava:guava:' + guavaVersion
     compile 'com.github.samtools:htsjdk:'+ htsjdkVersion
     compile(googleCloudNioDependency) {
         transitive = false
