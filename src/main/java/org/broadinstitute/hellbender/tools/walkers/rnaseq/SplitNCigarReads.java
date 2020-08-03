@@ -5,7 +5,7 @@ import htsjdk.samtools.reference.ReferenceSequenceFile;
 import org.broadinstitute.barclay.argparser.Advanced;
 import org.broadinstitute.barclay.argparser.Argument;
 import org.broadinstitute.barclay.argparser.CommandLineProgramProperties;
-import org.broadinstitute.barclay.argparser.RuntimeProperties;
+import org.broadinstitute.barclay.argparser.WorkflowProperties;
 import org.broadinstitute.barclay.argparser.WorkflowOutput;
 import org.broadinstitute.barclay.help.DocumentedFeature;
 import org.broadinstitute.hellbender.cmdline.StandardArgumentDefinitions;
@@ -70,7 +70,7 @@ import static org.broadinstitute.hellbender.cmdline.StandardArgumentDefinitions.
         programGroup = ReadDataManipulationProgramGroup.class
 )
 @DocumentedFeature
-@RuntimeProperties
+@WorkflowProperties
 public final class SplitNCigarReads extends MultiplePassReadWalker {
 
     // A list of tags that break upon splitting on N. These will be removed from reads in the output.

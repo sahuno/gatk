@@ -4,7 +4,7 @@ import htsjdk.samtools.SAMTag;
 import org.broadinstitute.barclay.argparser.Argument;
 import org.broadinstitute.barclay.argparser.CommandLineProgramProperties;
 import org.broadinstitute.barclay.argparser.ExperimentalFeature;
-import org.broadinstitute.barclay.argparser.RuntimeProperties;
+import org.broadinstitute.barclay.argparser.WorkflowProperties;
 import org.broadinstitute.barclay.argparser.WorkflowOutput;
 import org.broadinstitute.hellbender.cmdline.StandardArgumentDefinitions;
 import org.broadinstitute.hellbender.engine.FeatureContext;
@@ -21,7 +21,7 @@ import picard.cmdline.programgroups.ReadDataManipulationProgramGroup;
         programGroup = ReadDataManipulationProgramGroup.class
 )
 @ExperimentalFeature
-@RuntimeProperties
+@WorkflowProperties
 public class AddOriginalAlignmentTags extends ReadWalker {
     @Argument(fullName = StandardArgumentDefinitions.OUTPUT_LONG_NAME,
             shortName = StandardArgumentDefinitions.OUTPUT_SHORT_NAME,

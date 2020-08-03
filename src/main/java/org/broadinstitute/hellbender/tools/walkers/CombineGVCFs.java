@@ -12,7 +12,7 @@ import htsjdk.variant.vcf.VCFStandardHeaderLines;
 import org.broadinstitute.barclay.argparser.Argument;
 import org.broadinstitute.barclay.argparser.ArgumentCollection;
 import org.broadinstitute.barclay.argparser.CommandLineProgramProperties;
-import org.broadinstitute.barclay.argparser.RuntimeProperties;
+import org.broadinstitute.barclay.argparser.WorkflowProperties;
 import org.broadinstitute.barclay.argparser.WorkflowOutput;
 import org.broadinstitute.barclay.help.DocumentedFeature;
 import org.broadinstitute.hellbender.cmdline.StandardArgumentDefinitions;
@@ -76,7 +76,7 @@ import java.util.*;
  */
 @CommandLineProgramProperties(summary = "Merges one or more HaplotypeCaller GVCF files into a single GVCF with appropriate annotations", oneLineSummary = "Merges one or more HaplotypeCaller GVCF files into a single GVCF with appropriate annotations", programGroup = ShortVariantDiscoveryProgramGroup.class)
 @DocumentedFeature
-@RuntimeProperties
+@WorkflowProperties
 public final class CombineGVCFs extends MultiVariantWalkerGroupedOnStart {
 
     private VariantAnnotatorEngine annotationEngine;

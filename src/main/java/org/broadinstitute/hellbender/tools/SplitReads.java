@@ -4,7 +4,7 @@ import htsjdk.samtools.SAMFileHeader;
 import htsjdk.samtools.util.IOUtil;
 import org.broadinstitute.barclay.argparser.Argument;
 import org.broadinstitute.barclay.argparser.CommandLineProgramProperties;
-import org.broadinstitute.barclay.argparser.RuntimeProperties;
+import org.broadinstitute.barclay.argparser.WorkflowProperties;
 import org.broadinstitute.barclay.argparser.WorkflowOutput;
 import org.broadinstitute.barclay.help.DocumentedFeature;
 import org.broadinstitute.hellbender.cmdline.StandardArgumentDefinitions;
@@ -63,7 +63,7 @@ import java.util.stream.Collectors;
         programGroup = ReadDataManipulationProgramGroup.class
 )
 @DocumentedFeature
-@RuntimeProperties
+@WorkflowProperties
 public final class SplitReads extends ReadWalker {
 
     public static final String SAMPLE_SHORT_NAME = "SM";

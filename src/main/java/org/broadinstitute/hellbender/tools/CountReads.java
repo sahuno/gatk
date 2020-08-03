@@ -1,7 +1,7 @@
 package org.broadinstitute.hellbender.tools;
 
 import org.broadinstitute.barclay.argparser.CommandLineProgramProperties;
-import org.broadinstitute.barclay.argparser.RuntimeProperties;
+import org.broadinstitute.barclay.argparser.WorkflowProperties;
 import org.broadinstitute.barclay.help.DocumentedFeature;
 import org.broadinstitute.hellbender.cmdline.programgroups.CoverageAnalysisProgramGroup;
 import org.broadinstitute.hellbender.engine.FeatureContext;
@@ -30,7 +30,7 @@ import org.broadinstitute.hellbender.utils.read.GATKRead;
     programGroup = CoverageAnalysisProgramGroup.class
 )
 @DocumentedFeature
-@RuntimeProperties
+@WorkflowProperties
 public final class CountReads extends ReadWalker {
 
     private long count = 0;

@@ -2,7 +2,7 @@ package org.broadinstitute.hellbender.tools.walkers;
 
 import org.broadinstitute.barclay.argparser.Argument;
 import org.broadinstitute.barclay.argparser.CommandLineProgramProperties;
-import org.broadinstitute.barclay.argparser.RuntimeProperties;
+import org.broadinstitute.barclay.argparser.WorkflowProperties;
 import org.broadinstitute.barclay.argparser.WorkflowOutput;
 import org.broadinstitute.barclay.help.DocumentedFeature;
 import org.broadinstitute.hellbender.cmdline.StandardArgumentDefinitions;
@@ -61,7 +61,7 @@ import java.util.List;
         usageExample = "gatk UnmarkDuplicates -I marked_duplicates.bam -O unmarked_duplicates.bam",
         programGroup = ReadDataManipulationProgramGroup.class)
 @DocumentedFeature
-@RuntimeProperties
+@WorkflowProperties
 public class UnmarkDuplicates extends ReadWalker {
 
     static final String USAGE_SUMMARY = "Clears the 0x400 duplicate SAM flag";

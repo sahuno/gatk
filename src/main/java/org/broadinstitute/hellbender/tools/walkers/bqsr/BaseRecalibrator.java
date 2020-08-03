@@ -6,7 +6,7 @@ import org.apache.logging.log4j.Logger;
 import org.broadinstitute.barclay.argparser.Argument;
 import org.broadinstitute.barclay.argparser.ArgumentCollection;
 import org.broadinstitute.barclay.argparser.CommandLineProgramProperties;
-import org.broadinstitute.barclay.argparser.RuntimeProperties;
+import org.broadinstitute.barclay.argparser.WorkflowProperties;
 import org.broadinstitute.barclay.argparser.WorkflowInput;
 import org.broadinstitute.barclay.argparser.WorkflowOutput;
 import org.broadinstitute.barclay.help.DocumentedFeature;
@@ -83,7 +83,7 @@ import java.util.List;
         programGroup = ReadDataManipulationProgramGroup.class
 )
 @DocumentedFeature
-@RuntimeProperties
+@WorkflowProperties
 public final class BaseRecalibrator extends ReadWalker {
     public static final String USAGE_ONE_LINE_SUMMARY = "Generates recalibration table for Base Quality Score Recalibration (BQSR)";
     public static final String USAGE_SUMMARY = "First pass of the Base Quality Score Recalibration (BQSR)" +

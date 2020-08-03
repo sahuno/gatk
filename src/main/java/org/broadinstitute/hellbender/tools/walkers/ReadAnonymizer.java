@@ -8,7 +8,7 @@ import org.apache.commons.lang.ArrayUtils;
 import org.broadinstitute.barclay.argparser.Argument;
 import org.broadinstitute.barclay.argparser.CommandLineProgramProperties;
 import org.broadinstitute.barclay.argparser.ExperimentalFeature;
-import org.broadinstitute.barclay.argparser.RuntimeProperties;
+import org.broadinstitute.barclay.argparser.WorkflowProperties;
 import org.broadinstitute.barclay.argparser.WorkflowOutput;
 import org.broadinstitute.barclay.help.DocumentedFeature;
 import org.broadinstitute.hellbender.cmdline.StandardArgumentDefinitions;
@@ -53,7 +53,7 @@ import java.util.List;
 )
 @DocumentedFeature
 @ExperimentalFeature
-@RuntimeProperties
+@WorkflowProperties
 public final class ReadAnonymizer extends ReadWalker {
 
     @Argument(

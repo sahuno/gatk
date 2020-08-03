@@ -3,7 +3,7 @@ package org.broadinstitute.hellbender.tools.walkers.consensus;
 import org.broadinstitute.barclay.argparser.Argument;
 import org.broadinstitute.barclay.argparser.BetaFeature;
 import org.broadinstitute.barclay.argparser.CommandLineProgramProperties;
-import org.broadinstitute.barclay.argparser.RuntimeProperties;
+import org.broadinstitute.barclay.argparser.WorkflowProperties;
 import org.broadinstitute.barclay.argparser.WorkflowOutput;
 import org.broadinstitute.hellbender.cmdline.StandardArgumentDefinitions;
 import org.broadinstitute.hellbender.engine.DuplicateSetWalker;
@@ -58,7 +58,7 @@ import java.util.Random;
         programGroup = ReadDataManipulationProgramGroup.class
 )
 @BetaFeature
-@RuntimeProperties
+@WorkflowProperties
 public class DownsampleByDuplicateSet extends DuplicateSetWalker {
     @Argument(fullName = StandardArgumentDefinitions.OUTPUT_LONG_NAME, shortName = StandardArgumentDefinitions.OUTPUT_SHORT_NAME, doc = "Output file")
     @WorkflowOutput(requiredCompanions = {StandardArgumentDefinitions.OUTPUT_LONG_NAME + "Index"})
