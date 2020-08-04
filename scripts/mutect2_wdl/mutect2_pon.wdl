@@ -133,7 +133,7 @@ task CreatePanel {
       Runtime runtime_params
     }
 
-    Int machine_mem = select_first([small_task_mem, 24])
+    Int machine_mem = 26
     Int command_mem = machine_mem - 1
 
         parameter_meta{
