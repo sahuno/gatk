@@ -655,7 +655,6 @@ task MergeVCFs {
       String output_name
       Boolean compress
       Runtime runtime_params
-      Int mem = MergeVCFs_mem
     }
 
     String output_vcf = output_name + if compress then ".vcf.gz" else ".vcf"
