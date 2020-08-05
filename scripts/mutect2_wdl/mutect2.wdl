@@ -137,7 +137,7 @@ workflow Mutect2 {
       Int? preemptible
       Int? max_retries
       Int small_task_cpu = 2
-      Int small_task_mem = 8
+      Int small_task_mem = 26
       Int small_task_disk = 100
       Int boot_disk_size = 12
       Int learn_read_orientation_mem = 8000
@@ -660,7 +660,7 @@ task MergeVCFs {
     String output_vcf = output_name + if compress then ".vcf.gz" else ".vcf"
     String output_vcf_idx = output_vcf + if compress then ".tbi" else ".idx"
     
-    Int machine_mem = 24000
+    Int machine_mem = 36000
     Int command_mem = machine_mem - 500
     
     # using MergeVcfs instead of GatherVcfs so we can create indices
